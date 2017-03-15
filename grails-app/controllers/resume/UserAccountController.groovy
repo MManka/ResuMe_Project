@@ -16,12 +16,14 @@ class UserAccountController extends RestfulController {
 //    }
 
     // Checks to see if username taken.  If not, creates Account and saves to database.
-    def create() {
+    def save() {
         def uname = params.userName
         def account = UserAccount.find{userName == uname}
         if(account == null){
-            account = new UserAccount(userName : uname, password : params.userPassword)
+            account = new UserAccount(userName : uname, password : params.userPassword).save()
             new Profile(ownerAccount : account).save()
+            println UserAccount.findAll()
+
             println "Account Created"
             response.status = 200
         }

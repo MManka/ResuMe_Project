@@ -10,7 +10,10 @@
     <div id = "menu"></div>
     <div id = "profile-box"></div>
     <div id = "profile-info"></div>
+   <%-- <profile name ="w/e"></profile> --%>
 
     <asset:javascript src= "app.all.js"/>
+   <%-- <asset:javascript src="react.js" /> --%>
+    <%-- <asset:javascript src="profile.js /> --%>
 </body>
 </html>

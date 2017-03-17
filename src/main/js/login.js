@@ -79,12 +79,15 @@ class LoginForm extends React.Component{
         else {
             e.preventDefault();
 
-            fetch('http://localhost:8080/userAccount/?'
-                + 'userName=' + this.state.name + 'password=' + this.state.password, {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json"
-                }
+            fetch('http://localhost:8080/userAccount/save',
+                {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    method: "POST",
+                    body:  JSON.stringify({userName : this.state.name , userPassword : this.state.password})
+
             }).then(response => {
                 if (response.ok) {
                     //this.setState({message: " "});

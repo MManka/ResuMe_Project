@@ -20,9 +20,9 @@ class MenuLogin extends React.Component{
 
 function validate(name, username, password) {
     return {
-        name: name.length === 0,
-        username: username.length === 0,
-        password: password.length === 0,
+        //name: name.length === 0,
+        username: username.length == 0,
+        password: password.length == 0,
     };
 }
 
@@ -79,15 +79,18 @@ class LoginForm extends React.Component{
         else {
             e.preventDefault();
 
-            fetch('http://localhost:8080/userAccount/create?'
-                + 'userName=' + this.state.name, {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json"
-                }
+            fetch('http://localhost:8080/userAccount/save',
+                {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    method: "POST",
+                    body:  JSON.stringify({userName : this.state.name , userPassword : this.state.password})
+
             }).then(response => {
                 if (response.ok) {
-                    this.setState({message: " "});
+                    //this.setState({message: " "});
                     this.setState({
                         successMessage: this.state.name + ", you successfully signed up!",
                         isLocked: true

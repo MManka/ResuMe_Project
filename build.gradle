@@ -7,7 +7,12 @@ buildscript {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.11.6"
         classpath "org.grails.plugins:hibernate5:6.0.4"
+
     }
+}
+
+plugins{
+        id "com.moowork.node" version "0.12"
 }
 
 version "0.1"
@@ -64,3 +69,13 @@ assets {
     minifyJs = true
     minifyCss = true
 }
+
+node {
+    version = '5.10.1'
+    npmVersion = '3.8.3'
+    distBaseUrl = 'https://nodejs.org/dist'
+    download = true
+}
+
+processResources.dependsOn(['npmInstall', 'npm_run_bundle'])
+assetCompile.dependsOn(['npmInstall', 'npm_run_bundle'])

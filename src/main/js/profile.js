@@ -85,8 +85,8 @@ class ProfileInfo extends React.Component {
             <div id = "Shadow-Box">
                 <br/>
                 <h2 className = "profileInfoTitle">Work Experience</h2>
-                <h3 className = "profileInfo">Shelf Organizer: September 2016- Present</h3>
-                <h3 className = "profileInfo">Library Assistant: December 2014-2015</h3>
+                <h3 className = "profileInfo">Pharmacy Assistant: Feb 2015- Aug 2016</h3>
+                <h3 className = "profileInfo">Pharmacy Assistant: July 2012-June 2013</h3>
 
                 <br/><br/>
                 <hr></hr>
@@ -104,5 +104,5 @@ class ProfileInfo extends React.Component {
 }
 
 ReactDOM.render(<Menu icon = "http://images.clipartpanda.com/stack-of-paper-vector-29343.png"/>, document.getElementById('menu'));
-ReactDOM.render(<Profile name = "Illyria" status = "Evil Goddess"  work = "Part-time Librarian" pic = "https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-13-256.png" camera = "http://www.ensatt.fr/images/Graphisme/photo-icone.png"/>,document.getElementById('profile-box'));
+ReactDOM.render(<Profile name = "Anny" status = "Hong"  work = "Part-time Librarian" pic = "https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-13-256.png" camera = "http://www.ensatt.fr/images/Graphisme/photo-icone.png"/>,document.getElementById('profile-box'));
 ReactDOM.render(<ProfileInfo/>, document.getElementById('profile-info'));

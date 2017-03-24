@@ -59,6 +59,8 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 
+    compile("org.grails.plugins:spring-security-rest:2.0.0.M2")
+   compile "org.twitter4j:twitter4j-core:4.0.4"
 
 }
 
@@ -72,3 +74,12 @@ assets {
     minifyCss = true
 }
 
+node {
+    version = '5.10.1'
+    npmVersion = '3.8.3'
+    distBaseUrl = 'https://nodejs.org/dist'
+    download = false
+}
+
+processResources.dependsOn(['npmInstall', 'npm_run_bundle'])
+assetCompile.dependsOn(['npmInstall', 'npm_run_bundle'])

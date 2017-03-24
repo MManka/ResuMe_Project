@@ -129,3 +129,29 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+---
+grails:
+    plugin:
+        springsecurity:
+            securityConfigType: 'Annotation'
+            filterChain:
+                chainMap:
+                    - pattern: '/api/signup'
+                      filters: 'anonymousAuthenticationFilter,restExceptionTranslationFilter'
+
+                    - pattern: '/api/**'
+                      filters: 'JOINED_FILTERS,-anonymousAuthenticationFilter,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter,-rememberMeAuthenticationFilter'
+
+                    - pattern: '/**'
+                      filters: 'anonymousAuthenticationFilter,restExceptionTranslationFilter'
+
+            rest:
+                token:
+                    validation:
+                        enableAnonymousAccess: true
+
+            userLookup:
+                userDomainClassName: 'resume.UserAccount'
+                authorityJoinClassName: 'resume.UserAccount'
+            authority:
+                className: 'resume.Role'

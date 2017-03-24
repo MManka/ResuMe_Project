@@ -8,9 +8,7 @@ class UserAccount {
     // e.g. UserAccount owns the Profile
     static hasOne = [userProfile : Profile]
 
-    def getProfile(){
-        return userProfile
-    }
+
 
     static constraints = {
         userName unique: true

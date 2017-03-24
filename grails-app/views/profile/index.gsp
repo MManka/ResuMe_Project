@@ -15,5 +15,10 @@
     <asset:javascript src= "app.all.js"/>
    <%-- <asset:javascript src="react.js" /> --%>
     <%-- <asset:javascript src="profile.js /> --%>
+
+<script>
+
+    console.log('test test')
+</script>
 </body>
 </html>

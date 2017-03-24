@@ -34,18 +34,35 @@ class UserAccountController extends RestfulController {
             println "User Name is already taken."
             response.status = 404
         }
+        def activeUser = ActiveUser.get(0)
+        activeUser.activeUser=uname
+        activeUser.save(flush:true, failOnError: true)
     }
 
     // Allows user to access account
     def login(){
         def uname = params.userName
         def account = UserAccount.find{userName == uname}
+        def activeUser = ActiveUser.get(0)
+        activeUser.activeUser=uname
+        activeUser.save()
+
         return account
     }
 
     def delete(){
         def account = UserAccount.find{userName == uname}
         account.delete(flush : true)
+    }
+
+    def getActiveUser() {
+        def activeuname = ActiveUser.get(0)
+        return activeuname
+    }
+
+    def getProfileDetails() {
+        //uname = params.uname
+
     }
 
 }

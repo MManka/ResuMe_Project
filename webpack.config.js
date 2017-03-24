@@ -11,6 +11,7 @@ module.exports = {
         app2: './src/main/js/app2.js',
         app3: './src/main/js/app3.js',
         app4: './src/main/js/app4.js',
+        appHome: './src/main/js/appHome.js'
     },
 
     output: {

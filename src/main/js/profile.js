@@ -41,8 +41,7 @@ class Profile extends React.Component {
                                            className="image"/></circularbtn3>
 
                 <br/><br/>
-                <btn><a href = "MyResumes.html">View My Resumes</a></btn>
-                {/*<button onClick = {this.MyResumesButton.bind(this)}>View Resumes</button> */}
+                <btn><a href = "/resume">View My Resumes</a></btn>
                 <br/><br/>
             </div>
         );
@@ -104,5 +103,5 @@ class ProfileInfo extends React.Component {
 }
 
 ReactDOM.render(<Menu icon = "http://images.clipartpanda.com/stack-of-paper-vector-29343.png"/>, document.getElementById('menu'));
-ReactDOM.render(<Profile name = "Marlin" status = "Evil Goddess"  work = "Part-time Librarian" pic = "https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-13-256.png" camera = "http://www.ensatt.fr/images/Graphisme/photo-icone.png"/>,document.getElementById('profile-box'));
+ReactDOM.render(<Profile name = "John Smith" status = "Student at Western University"  work = "Part-time Librarian" pic = "https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-13-256.png" camera = "http://www.ensatt.fr/images/Graphisme/photo-icone.png"/>,document.getElementById('profile-box'));
 ReactDOM.render(<ProfileInfo/>, document.getElementById('profile-info'));

@@ -22076,7 +22076,7 @@ var Profile = function (_React$Component2) {
                     null,
                     _react2.default.createElement(
                         'a',
-                        { href: 'MyResumes.html' },
+                        { href: '/resume' },
                         'View My Resumes'
                     )
                 ),

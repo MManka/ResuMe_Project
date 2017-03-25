@@ -22086,9 +22086,8 @@ var LoginForm = function (_React$Component2) {
 
                 }).then(function (response) {
                     if (response.ok) {
-                        //this.setState({message: " "});
                         _this3.setState({
-                            successMessage: _this3.state.name + ", you successfully signed up!",
+                            message: _this3.state.name + ", you successfully signed up!",
                             isLocked: true
                         });
                     } else {
@@ -22143,6 +22142,15 @@ var LoginForm = function (_React$Component2) {
                         _react2.default.createElement('br', null)
                     ),
                     _react2.default.createElement('input', { id: 'loginButton', type: 'submit', value: 'Create Account' }),
+                    _react2.default.createElement(
+                        'btn',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '/profile', disabled: this.state.isLocked },
+                            'View My Resumes'
+                        )
+                    ),
                     _react2.default.createElement('br', null)
                 )
             );

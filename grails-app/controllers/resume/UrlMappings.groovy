@@ -8,6 +8,8 @@ class UrlMappings {
                 // apply constraints here
             }
         }
+        "/login/$action?"(controller: "login", view: "/userAccount")
+        "/logout/$action?"(controller: "logout")
 
         "/"(view:"/index")
         "500"(view:'/error')

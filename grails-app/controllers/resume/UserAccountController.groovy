@@ -55,9 +55,7 @@ class UserAccountController extends RestfulController {
     }
 
     // Allows user to access account
-    def login(){ }
-
-
+    def login(){}
 
     def logout = {
         flash.message = "Goodbye ${session.user.name}"

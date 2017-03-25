@@ -133,7 +133,7 @@ environments:
 grails:
     plugin:
         springsecurity:
-            securityConfigType: 'Annotation'
+            securityConfigType: 'SecurityConfigType.Requestmap'
             filterChain:
                 chainMap:
                     - pattern: '/api/signup'
@@ -155,3 +155,5 @@ grails:
                 authorityJoinClassName: 'resume.UserRole'
             authority:
                 className: 'resume.Role'
+            logout:
+                postOnly: false

@@ -292,6 +292,28 @@ circularbtn3 {
     border: 1px solid #ddd;
 }
 
+.formInputLong {
+    display: block;
+    font-size: 20px;
+    padding: 5px 10px;
+    position: relative;
+    left: 67px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 630px;
+    height: 35px;
+    text-align: center;
+}
+.textareaInput{
+    display: block;
+    font-size: 20px;
+    padding: 5px 10px;
+    position: relative;
+    left: 60px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
 #template-List {
     display: inline-block;
     position: relative;

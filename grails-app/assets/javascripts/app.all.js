@@ -63,7 +63,10 @@
 /******/ 	__webpack_require__.p = "/assets/";
 
 /******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 186);
+
 /******/ 	return __webpack_require__(__webpack_require__.s = 187);
+
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21919,8 +21922,12 @@ module.exports = g;
 /* 182 */,
 /* 183 */,
 /* 184 */,
+
+/* 185 */
+
 /* 185 */,
 /* 186 */
+
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22140,43 +22147,170 @@ var ProfileInfo = function (_React$Component3) {
             return _react2.default.createElement(
                 'div',
                 { id: 'Shadow-Box' },
-                _react2.default.createElement('br', null),
                 _react2.default.createElement(
                     'h2',
-                    { className: 'profileInfoTitle' },
-                    'Work Experience'
-                ),
-                _react2.default.createElement(
-                    'h3',
-                    { className: 'profileInfo' },
-                    'Shelf Organizer: September 2016- Present'
-                ),
-                _react2.default.createElement(
-                    'h3',
-                    { className: 'profileInfo' },
-                    'Library Assistant: December 2014-2015'
+                    null,
+                    ' Basic Information'
                 ),
                 _react2.default.createElement('br', null),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('hr', null),
                 _react2.default.createElement(
-                    'h2',
-                    { className: 'profileInfoTitle' },
-                    'Education'
+                    'form',
+                    null,
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' First Name', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Last Name', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: 'E-mail Address ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: 'Phone Number', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: 'Address', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        ' Work experience'
+                    ),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Job Title  ', name: 'name' })
+                    ),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Company Name  ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' start date ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' End Date ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('textarea', { name: 'info', className: 'textareaInput', placeholder: ' job discription ', cols: '50', rows: '8' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        ' Qualifications'
+                    ),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('textarea', { name: 'info', className: 'textareaInput', placeholder: ' List Your Skills,Certifications and accreditions that you have received ', cols: '50', rows: '8' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        ' Education'
+                    ),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Institution Name ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Start Date (ex: September 2013)', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' End Date (ex: April 2017, or Present)', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('textarea', { name: 'info', className: 'textareaInput', placeholder: ' Discription  ', cols: '50', rows: '8' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        ' Interests'
+                    ),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('textarea', { name: 'info', className: 'textareaInput', placeholder: ' List your interests ', cols: '50', rows: '8' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        ' References'
+                    ),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Full Name  ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Their Position ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Phone Number ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' E-mail Address ', name: 'name' })
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        _react2.default.createElement('input', { className: 'formInputLong', type: 'text', placeholder: ' Company Name ', name: 'name' })
+                    ),
+                    _react2.default.createElement('input', { type: 'submit', value: 'Submit' })
                 ),
-                _react2.default.createElement(
-                    'h3',
-                    { className: 'profileInfo' },
-                    'Western University: September 2015- Present'
-                ),
-                _react2.default.createElement(
-                    'h3',
-                    { className: 'profileInfo' },
-                    'High School Secondary: September 2011- June 2015'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('hr', null)
+                _react2.default.createElement('br', null)
             );
         }
     }]);
@@ -22185,17 +22319,29 @@ var ProfileInfo = function (_React$Component3) {
 }(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(Menu, { icon: 'http://images.clipartpanda.com/stack-of-paper-vector-29343.png' }), document.getElementById('menu'));
+
+_reactDom2.default.render(_react2.default.createElement(Profile, { name: 'Yeeee', status: 'Evil Goddess', work: 'Part-time Librarian', pic: 'https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-13-256.png', camera: 'http://www.ensatt.fr/images/Graphisme/photo-icone.png' }), document.getElementById('profile-box'));
+_reactDom2.default.render(_react2.default.createElement(ProfileInfo, null), document.getElementById('profile-info'));
+
+/***/ }),
+/* 186 */
+
 _reactDom2.default.render(_react2.default.createElement(Profile, { name: 'Marlin', status: 'Evil Goddess', work: 'Part-time Librarian', pic: 'https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-13-256.png', camera: 'http://www.ensatt.fr/images/Graphisme/photo-icone.png' }), document.getElementById('profile-box'));
 _reactDom2.default.render(_react2.default.createElement(ProfileInfo, null), document.getElementById('profile-info'));
 
 /***/ }),
 /* 187 */
+
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+
+var _profile = __webpack_require__(185);
+
 var _profile = __webpack_require__(186);
+
 
 var _profile2 = _interopRequireDefault(_profile);
 

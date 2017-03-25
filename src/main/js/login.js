@@ -119,7 +119,7 @@ class LoginForm extends React.Component{
                 <label>
                     <h1 className = "heading">Sign Up</h1>
                     <br/>
-                    <input className = "formInput" type="text"  placeholder="Enter Name" disabled = {this.state.isLocked} value={this.state.name} onChange={this.handleNameChange}/>
+                    <input className = "formInput" type="text"  placeholder="Enter " disabled = {this.state.isLocked} value={this.state.name} onChange={this.handleNameChange}/>
                     <br/>
                     <input className = "formInput" type="text" placeholder="Enter Username" disabled = {this.state.isLocked} value={this.state.username} onChange={this.handleUsernameChange}/>
                     <br/>

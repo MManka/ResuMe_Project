@@ -63,7 +63,11 @@
 /******/ 	__webpack_require__.p = "/assets/";
 
 /******/ 	// Load entry module and return exports
+
 /******/ 	return __webpack_require__(__webpack_require__.s = 187);
+
+/******/ 	return __webpack_require__(__webpack_require__.s = 188);
+
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21917,7 +21921,12 @@ module.exports = g;
 
 /***/ }),
 /* 182 */,
+
 /* 183 */
+
+/* 183 */,
+/* 184 */
+
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22085,9 +22094,8 @@ var LoginForm = function (_React$Component2) {
 
                 }).then(function (response) {
                     if (response.ok) {
-                        //this.setState({message: " "});
                         _this3.setState({
-                            successMessage: _this3.state.name + ", you successfully signed up!",
+                            message: _this3.state.name + ", you successfully signed up!",
                             isLocked: true
                         });
                     } else {
@@ -22142,6 +22150,15 @@ var LoginForm = function (_React$Component2) {
                         _react2.default.createElement('br', null)
                     ),
                     _react2.default.createElement('input', { id: 'loginButton', type: 'submit', value: 'Create Account' }),
+                    _react2.default.createElement(
+                        'btn',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '/profile', disabled: this.state.isLocked },
+                            'View My Resumes'
+                        )
+                    ),
                     _react2.default.createElement('br', null)
                 )
             );
@@ -22155,16 +22172,27 @@ _reactDom2.default.render(_react2.default.createElement(MenuLogin, { icon: 'http
 _reactDom2.default.render(_react2.default.createElement(LoginForm, null), document.getElementById('log-in'));
 
 /***/ }),
+
 /* 184 */,
 /* 185 */,
 /* 186 */,
 /* 187 */
+
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */
+
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+
 var _login = __webpack_require__(183);
+
+var _login = __webpack_require__(184);
+
 
 var _login2 = _interopRequireDefault(_login);
 

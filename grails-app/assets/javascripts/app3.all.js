@@ -63,7 +63,12 @@
 /******/ 	__webpack_require__.p = "/assets/";
 
 /******/ 	// Load entry module and return exports
+
+ 
 /******/ 	return __webpack_require__(__webpack_require__.s = 188);
+
+/******/ 	return __webpack_require__(__webpack_require__.s = 189);
+
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21918,7 +21923,12 @@ module.exports = g;
 /***/ }),
 /* 182 */,
 /* 183 */,
+
 /* 184 */
+
+/* 184 */,
+/* 185 */
+
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21945,67 +21955,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 
-var MenuResumes = function (_React$Component) {
-    _inherits(MenuResumes, _React$Component);
-
-    function MenuResumes() {
-        _classCallCheck(this, MenuResumes);
-
-        return _possibleConstructorReturn(this, (MenuResumes.__proto__ || Object.getPrototypeOf(MenuResumes)).apply(this, arguments));
-    }
-
-    _createClass(MenuResumes, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'menu-box' },
-                _react2.default.createElement(
-                    'h2',
-                    { id: 'resume' },
-                    'ResuME'
-                ),
-                _react2.default.createElement(
-                    'icon',
-                    null,
-                    _react2.default.createElement('img', { src: this.props.icon, height: 90 })
-                ),
-                _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        { href: 'index.html' },
-                        'About'
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        { href: '#certifications' },
-                        'Contact'
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        { href: '#applications' },
-                        'Help'
-                    )
-                )
-            );
-        }
-    }]);
-
-    return MenuResumes;
-}(_react2.default.Component);
-
-var ResumeList = function (_React$Component2) {
-    _inherits(ResumeList, _React$Component2);
+var ResumeList = function (_React$Component) {
+    _inherits(ResumeList, _React$Component);
 
     function ResumeList() {
         _classCallCheck(this, ResumeList);
@@ -22016,27 +21967,57 @@ var ResumeList = function (_React$Component2) {
     _createClass(ResumeList, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { id: 'Shadow-Box' });
+            return _react2.default.createElement(
+                'div',
+                { id: 'template-List' },
+                _react2.default.createElement(
+                    'h2',
+                    { className: 'heading2' },
+                    this.props.myresumes
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                    'h2',
+                    { className: 'heading2' },
+                    _react2.default.createElement(
+                        'a',
+                        { href: '/choose' },
+                        'New Resume Template'
+                    )
+                )
+            );
         }
     }]);
 
     return ResumeList;
 }(_react2.default.Component);
 
-_reactDom2.default.render(_react2.default.createElement(MenuResumes, { icon: 'http://images.clipartpanda.com/stack-of-paper-vector-29343.png' }), document.getElementById('menu-MyResumes'));
-_reactDom2.default.render(_react2.default.createElement(ResumeList, null), document.getElementById('list'));
+_reactDom2.default.render(_react2.default.createElement(ResumeList, { myresumes: 'You have no Resumes' }), document.getElementById('list'));
 
 /***/ }),
+
 /* 185 */,
 /* 186 */,
 /* 187 */,
 /* 188 */
+
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */
+
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var _myresumes = __webpack_require__(184);
+
+var _myresumes = __webpack_require__(185);
+
 
 var _myresumes2 = _interopRequireDefault(_myresumes);
 

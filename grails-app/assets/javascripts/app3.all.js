@@ -63,7 +63,12 @@
 /******/ 	__webpack_require__.p = "/assets/";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 187);
+
+ 
+/******/ 	return __webpack_require__(__webpack_require__.s = 188);
+
+/******/ 	return __webpack_require__(__webpack_require__.s = 189);
+
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9309,7 +9314,7 @@ module.exports = focusNode;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(global) {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9330,19 +9335,24 @@ module.exports = focusNode;
  *
  * The activeElement will be null only if the document or document body is not
  * yet defined.
+ *
+ * @param {?DOMDocument} doc Defaults to current document.
+ * @return {?DOMElement}
  */
-function getActiveElement() /*?DOMElement*/{
-  if (typeof document === 'undefined') {
+function getActiveElement(doc) /*?DOMElement*/{
+  doc = doc || global.document;
+  if (typeof doc === 'undefined') {
     return null;
   }
   try {
-    return document.activeElement || document.body;
+    return doc.activeElement || doc.body;
   } catch (e) {
-    return document.body;
+    return doc.body;
   }
 }
 
 module.exports = getActiveElement;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181)))
 
 /***/ }),
 /* 80 */
@@ -19513,10 +19523,10 @@ module.exports = getMarkupWrap;
  */
 
 function getUnboundedScrollPosition(scrollable) {
-  if (scrollable === window) {
+  if (scrollable.Window && scrollable instanceof scrollable.Window) {
     return {
-      x: window.pageXOffset || document.documentElement.scrollLeft,
-      y: window.pageYOffset || document.documentElement.scrollTop
+      x: scrollable.pageXOffset || scrollable.document.documentElement.scrollLeft,
+      y: scrollable.pageYOffset || scrollable.document.documentElement.scrollTop
     };
   }
   return {
@@ -19632,7 +19642,9 @@ module.exports = hyphenateStyleName;
  * @return {boolean} Whether or not the object is a DOM node.
  */
 function isNode(object) {
-  return !!(object && (typeof Node === 'function' ? object instanceof Node : typeof object === 'object' && typeof object.nodeType === 'number' && typeof object.nodeName === 'string'));
+  var doc = object ? object.ownerDocument || object : document;
+  var defaultView = doc.defaultView || window;
+  return !!(object && (typeof defaultView.Node === 'function' ? object instanceof defaultView.Node : typeof object === 'object' && typeof object.nodeType === 'number' && typeof object.nodeName === 'string'));
 }
 
 module.exports = isNode;
@@ -21882,9 +21894,41 @@ module.exports = __webpack_require__(21);
 
 
 /***/ }),
-/* 181 */,
+/* 181 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
 /* 182 */,
-/* 183 */
+/* 183 */,
+
+/* 184 */
+
+/* 184 */,
+/* 185 */
+
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21911,67 +21955,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 
-var MenuResumes = function (_React$Component) {
-    _inherits(MenuResumes, _React$Component);
-
-    function MenuResumes() {
-        _classCallCheck(this, MenuResumes);
-
-        return _possibleConstructorReturn(this, (MenuResumes.__proto__ || Object.getPrototypeOf(MenuResumes)).apply(this, arguments));
-    }
-
-    _createClass(MenuResumes, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'menu-box' },
-                _react2.default.createElement(
-                    'h2',
-                    { id: 'resume' },
-                    'ResuME'
-                ),
-                _react2.default.createElement(
-                    'icon',
-                    null,
-                    _react2.default.createElement('img', { src: this.props.icon, height: 90 })
-                ),
-                _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        { href: 'index.html' },
-                        'About'
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        { href: '#certifications' },
-                        'Contact'
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        { href: '#applications' },
-                        'Help'
-                    )
-                )
-            );
-        }
-    }]);
-
-    return MenuResumes;
-}(_react2.default.Component);
-
-var ResumeList = function (_React$Component2) {
-    _inherits(ResumeList, _React$Component2);
+var ResumeList = function (_React$Component) {
+    _inherits(ResumeList, _React$Component);
 
     function ResumeList() {
         _classCallCheck(this, ResumeList);
@@ -21982,27 +21967,57 @@ var ResumeList = function (_React$Component2) {
     _createClass(ResumeList, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { id: 'Shadow-Box' });
+            return _react2.default.createElement(
+                'div',
+                { id: 'template-List' },
+                _react2.default.createElement(
+                    'h2',
+                    { className: 'heading2' },
+                    this.props.myresumes
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                    'h2',
+                    { className: 'heading2' },
+                    _react2.default.createElement(
+                        'a',
+                        { href: '/choose' },
+                        'New Resume Template'
+                    )
+                )
+            );
         }
     }]);
 
     return ResumeList;
 }(_react2.default.Component);
 
-_reactDom2.default.render(_react2.default.createElement(MenuResumes, { icon: 'http://images.clipartpanda.com/stack-of-paper-vector-29343.png' }), document.getElementById('menu-MyResumes'));
-_reactDom2.default.render(_react2.default.createElement(ResumeList, null), document.getElementById('list'));
+_reactDom2.default.render(_react2.default.createElement(ResumeList, { myresumes: 'You have no Resumes' }), document.getElementById('list'));
 
 /***/ }),
-/* 184 */,
+
 /* 185 */,
 /* 186 */,
-/* 187 */
+/* 187 */,
+/* 188 */
+
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */
+
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _myresumes = __webpack_require__(183);
+var _myresumes = __webpack_require__(184);
+
+var _myresumes = __webpack_require__(185);
+
 
 var _myresumes2 = _interopRequireDefault(_myresumes);
 

@@ -74,8 +74,9 @@ node {
     version = '5.10.1'
     npmVersion = '3.8.3'
     distBaseUrl = 'https://nodejs.org/dist'
-    download = true
+    download = false
 }
 
 processResources.dependsOn(['npmInstall', 'npm_run_bundle'])
 assetCompile.dependsOn(['npmInstall', 'npm_run_bundle'])
+

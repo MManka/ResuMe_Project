@@ -10,3 +10,6 @@ build/
 .project
 .settings
 .classpath
+classes/
+grails-app/assets/javascripts/appHome.all.js
+src/main/webapp/

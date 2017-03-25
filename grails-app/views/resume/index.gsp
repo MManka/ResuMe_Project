@@ -7,6 +7,7 @@
     <asset:stylesheet src = "styleSheet.css"/>
 </head>
 <body>
+    <h1 class="heading" style="position: relative; left: 20px">My Resumes</h1>
     <div id = "list"></div>
 
     <asset:javascript src= "app3.all.js"/>

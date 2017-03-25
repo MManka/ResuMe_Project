@@ -90,9 +90,8 @@ class LoginForm extends React.Component{
 
             }).then(response => {
                 if (response.ok) {
-                    //this.setState({message: " "});
                     this.setState({
-                        successMessage: this.state.name + ", you successfully signed up!",
+                        message: this.state.name + ", you successfully signed up!",
                         isLocked: true
                     });
                 }
@@ -120,7 +119,7 @@ class LoginForm extends React.Component{
                 <label>
                     <h1 className = "heading">Sign Up</h1>
                     <br/>
-                    <input className = "formInput" type="text"  placeholder="Enter Name" disabled = {this.state.isLocked} value={this.state.name} onChange={this.handleNameChange}/>
+                    <input className = "formInput" type="text"  placeholder="Enter " disabled = {this.state.isLocked} value={this.state.name} onChange={this.handleNameChange}/>
                     <br/>
                     <input className = "formInput" type="text" placeholder="Enter Username" disabled = {this.state.isLocked} value={this.state.username} onChange={this.handleUsernameChange}/>
                     <br/>
@@ -130,6 +129,9 @@ class LoginForm extends React.Component{
                     <br/>
                 </label>
                 <input id = "loginButton" type="submit" value="Create Account" />
+
+                <a href = "/profile" style = "text-align: center" disabled = {this.state.isLocked}>Continue to my profile</a>
+
                 <br/>
             </form>
         </div>

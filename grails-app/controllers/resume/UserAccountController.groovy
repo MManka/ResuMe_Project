@@ -6,18 +6,30 @@ import grails.rest.*
 
 class UserAccountController extends RestfulController {
     //static responseFormats = ['json']
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", login: "GET"]
-
-//URL mappings determine what http method is used for each Controller method.
-// see http://docs.grails.org/2.2.1/guide/webServices.html
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     UserAccountController(){
-        super(UserAccount)      //Takes the same objects as Domain class.
+        super(UserAccount)
     }
 
+    def UserAccountService
 //    def index() {
 //    }
+    def authenticate = {
+        def user = UserAccount.findByUserNameAndPassword(params.userName, params.password)
+        if(user){
+            session.user = user
+            flash.message = "Hello ${user.name}!"
+            redirect(controller:"entry", action:"list")
+            def activeUser = ActiveUser.get(0)
+            activeUser.activeUser=session.user.name
+            activeUser.save(flush:true, failOnError: true)
+        }else{
+            flash.message = "Sorry, ${params.userName}. Please try again."
+            redirect(action:"login")
+        }
 
+    }
     // Checks to see if username taken.  If not, creates Account and saves to database.
     def save() {
         println "stuff"
@@ -32,48 +44,40 @@ class UserAccountController extends RestfulController {
 
             println "Account Created"
             response.status = 200
-
         }
         else{
             println "User Name is already taken."
             response.status = 404
         }
+        def activeUser = ActiveUser.get(0)
+        activeUser.activeUser=session.account.name
+        activeUser.save(flush:true, failOnError: true)
     }
 
     // Allows user to access account
-    def login(){
-        def uname = params.userName
-        def account = UserAccount.find{userName == uname}
-        if(account == null){
-            println "User is not registered"
-            response.status = 404
-        }
-        else {
-            return account
-            response.status = 200
-        }
+    def login(){ }
+
+
+
+    def logout = {
+        flash.message = "Goodbye ${session.user.name}"
+        session.user = null
+        redirect(controller:"entry", action:"list")
     }
 
     def delete(){
         def account = UserAccount.find{userName == uname}
-        if(account == null){
-            println "You cannot destroy what never was"
-            response.status = 404
-        }
         account.delete(flush : true)
-        println "Account deleted"
-        response.status = 200
+    }
+
+    def getActiveUser() {
+        def activeuname = ActiveUser.get(0)
+        return activeuname
+    }
+
+    def getProfileDetails() {
+        //uname = params.uname
+
     }
 
 }
-
-/*
-Notes:
-200 is an HTTP response status code, which indicates if a specific HTTP response has been successfully completed.
-There are five classes: informational responses, successful responses, redirects, client errors,
-and server errors.
-200 means a request has succeeded. With HTTP method GET: resource has been fetched and is present in message body
-POST:  Resource describing result of action transmitted in message body.
-404:  Server cannot find the requested resource.
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
- */

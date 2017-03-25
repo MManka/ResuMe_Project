@@ -22024,7 +22024,7 @@ var LoginForm = function (_React$Component2) {
             username: "",
             password: "",
             message: "",
-            successMessage: "",
+            successMessage: "We made it!",
             isLocked: false
         };
 
@@ -22087,6 +22087,7 @@ var LoginForm = function (_React$Component2) {
                     if (response.ok) {
                         //this.setState({message: " "});
                         _this3.setState({
+                            message: "Account: " + _this3.state.name + " is made!",
                             successMessage: _this3.state.name + ", you successfully signed up!",
                             isLocked: true
                         });
@@ -22128,9 +22129,9 @@ var LoginForm = function (_React$Component2) {
                             'Sign Up'
                         ),
                         _react2.default.createElement('br', null),
-                        _react2.default.createElement('input', { className: 'formInput', type: 'text', placeholder: 'Enter Name', disabled: this.state.isLocked, value: this.state.name, onChange: this.handleNameChange }),
-                        _react2.default.createElement('br', null),
                         _react2.default.createElement('input', { className: 'formInput', type: 'text', placeholder: 'Enter Username', disabled: this.state.isLocked, value: this.state.username, onChange: this.handleUsernameChange }),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('input', { className: 'formInput', type: 'text', placeholder: 'Enter Name', disabled: this.state.isLocked, value: this.state.name, onChange: this.handleNameChange }),
                         _react2.default.createElement('br', null),
                         _react2.default.createElement('input', { className: 'formInput', type: 'password', placeholder: 'Enter password', disabled: this.state.isLocked, value: this.state.password, onChange: this.handlePasswordChange }),
                         _react2.default.createElement('br', null),

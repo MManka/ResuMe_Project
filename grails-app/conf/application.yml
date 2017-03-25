@@ -152,6 +152,6 @@ grails:
 
             userLookup:
                 userDomainClassName: 'resume.UserAccount'
-                authorityJoinClassName: 'resume.UserAccount'
+                authorityJoinClassName: 'resume.UserRole'
             authority:
                 className: 'resume.Role'

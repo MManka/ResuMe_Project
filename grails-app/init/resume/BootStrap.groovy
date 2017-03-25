@@ -2,6 +2,7 @@ package resume
 
 class BootStrap {
 
+
     def init = { servletContext ->
         createSaveAccount("Alba",  "Miranda")
     }

@@ -3,7 +3,9 @@ package resume
 //import static org.springframework.http.HttpStatus.*
 // import grails.transaction.Transactional
 import grails.rest.RestfulController
+import grails.plugin.springsecurity.annotation.Secured
 
+@Secured(['ROLE_USER'])
 class ProfileController extends RestfulController {
 
     ProfileController(){

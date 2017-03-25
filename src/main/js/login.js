@@ -35,7 +35,7 @@ class LoginForm extends React.Component{
             username: "",
             password: "",
             message: "",
-            successMessage: "",
+            successMessage: "We made it!",
             isLocked: false
         };
 
@@ -92,6 +92,7 @@ class LoginForm extends React.Component{
                 if (response.ok) {
                     //this.setState({message: " "});
                     this.setState({
+                        message: "Account: " + this.state.name + " is made!",
                         successMessage: this.state.name + ", you successfully signed up!",
                         isLocked: true
                     });
@@ -120,9 +121,9 @@ class LoginForm extends React.Component{
                 <label>
                     <h1 className = "heading">Sign Up</h1>
                     <br/>
-                    <input className = "formInput" type="text"  placeholder="Enter Name" disabled = {this.state.isLocked} value={this.state.name} onChange={this.handleNameChange}/>
+                    <input className = "formInput" type="text"  placeholder="Enter Username" disabled = {this.state.isLocked} value={this.state.username} onChange={this.handleUsernameChange}/>
                     <br/>
-                    <input className = "formInput" type="text" placeholder="Enter Username" disabled = {this.state.isLocked} value={this.state.username} onChange={this.handleUsernameChange}/>
+                    <input className = "formInput" type="text" placeholder="Enter Name" disabled = {this.state.isLocked} value={this.state.name} onChange={this.handleNameChange}/>
                     <br/>
                     <input className = "formInput" type="password"  placeholder="Enter password" disabled = {this.state.isLocked} value={this.state.password} onChange={this.handlePasswordChange}/>
                     <br/>

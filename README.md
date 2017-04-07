@@ -7,7 +7,7 @@
  2.  Once you're signed into github, go to <a href = https://github.com/MManka/ResuMe_Project> Group20's code project repository </a> .  
    Once you're signed into github, go to <a href = https://github.com/MManka/ResuMe_Project> Group20's code project repository </a> .  
   
- 3.  Fork the repository from github by clicking on the 'Fork' button in the top right-hand corner of the screen: <img src = "/Images/2212_Fork.JPG">
+ 3.  Fork the repository from github by clicking on the 'Fork' button in the top right-hand corner of the screen: <img src = "/ images / 스크린샷(10)_LI.jpg">
    Fork the repository from github by clicking on the 'Fork' button in the top right-hand corner of the screen: <img src = "/Images/2212_Fork.JPG">
   
   This should make the ResuMe repository appear in your Github account under your repositories:

@@ -13,7 +13,6 @@
   Alternatively, you can 'Clone or Download' Group20's code project repository to your favourite web development IDE.  We used IntelliJ, and will give instructions specific to running our repository from this environment.
   
  4.  You will also need to download React to use our stunning front-end user interface.  
-  You will also need to download React to use our stunning front-end user interface.  
   Download <a href = https://nodejs.org/en/> node.js </a> .  Then, from commandline in unix or commandprompt in Windows, run these commands:
   
   npm init

@@ -8,7 +8,7 @@
  3.  Fork the repository from github by clicking on the 'Fork' button in the top right-hand corner of the screen: <img src = "/images/스크린샷(9)_LI.jpg">
    
   This should make the ResuMe repository appear in your Github account under your repositories:
-  <img src = "/images/스크린샷(10)_LI.jpg"">
+  <img src = "/images/스크린샷(10)_LI.jpg">
   
   Alternatively, you can 'Clone or Download' Group20's code project repository to your favourite web development IDE.  We used IntelliJ, and will give instructions specific to running our repository from this environment.
   

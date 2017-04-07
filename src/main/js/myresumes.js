@@ -4,30 +4,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class MenuResumes extends React.Component {
-    render() {
-        return(
-            <div className = "menu-box">
-                <h2 id = "resume">ResuME</h2>
-                <icon><img src = {this.props.icon} height = {90}/></icon>
-                <li><a href="index.html">About</a></li>
-                <li><a href="#certifications">Contact</a></li>
-                <li><a href="#applications">Help</a></li>
-            </div>
-        );
-    }
-}
-
 class ResumeList extends React.Component {
     render() {
         return (
-            <div id="Shadow-Box">
-
+            <div id = "template-List">
+                <h2 className = "heading2">{this.props.myresumes}</h2>
+                <br/><br/><br/><br/>
+                <h2 className = "heading2"><a href = "/choose">New Resume Template</a></h2>
             </div>
         );
     }
 
 }
 
-ReactDOM.render(<MenuResumes icon = "http://images.clipartpanda.com/stack-of-paper-vector-29343.png"/>, document.getElementById('menu-MyResumes'));
-ReactDOM.render(<ResumeList/>, document.getElementById('list'));
+ReactDOM.render(<ResumeList myresumes = "You have no Resumes"/>, document.getElementById('list'));

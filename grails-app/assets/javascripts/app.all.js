@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "/assets/";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 186);
+/******/ 	return __webpack_require__(__webpack_require__.s = 187);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21919,7 +21919,8 @@ module.exports = g;
 /* 182 */,
 /* 183 */,
 /* 184 */,
-/* 185 */
+/* 185 */,
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21978,15 +21979,6 @@ var Menu = function (_React$Component) {
                         'a',
                         { href: 'index.html' },
                         'Search Templates'
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        { href: '#certifications' },
-                        'My Certifications'
                     )
                 ),
                 _react2.default.createElement(
@@ -22075,7 +22067,7 @@ var Profile = function (_React$Component2) {
                     null,
                     _react2.default.createElement(
                         'a',
-                        { href: 'MyResumes.html' },
+                        { href: '/resume' },
                         'View My Resumes'
                     )
                 ),
@@ -22311,17 +22303,21 @@ var ProfileInfo = function (_React$Component3) {
 }(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(Menu, { icon: 'http://images.clipartpanda.com/stack-of-paper-vector-29343.png' }), document.getElementById('menu'));
+
 _reactDom2.default.render(_react2.default.createElement(Profile, { name: 'Yeeee', status: 'Evil Goddess', work: 'Part-time Librarian', pic: 'https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-13-256.png', camera: 'http://www.ensatt.fr/images/Graphisme/photo-icone.png' }), document.getElementById('profile-box'));
+
+_reactDom2.default.render(_react2.default.createElement(Profile, { name: 'John Smith', status: 'Student at Western University', work: 'Part-time Librarian', pic: 'https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-13-256.png', camera: 'http://www.ensatt.fr/images/Graphisme/photo-icone.png' }), document.getElementById('profile-box'));
+
 _reactDom2.default.render(_react2.default.createElement(ProfileInfo, null), document.getElementById('profile-info'));
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _profile = __webpack_require__(185);
+var _profile = __webpack_require__(186);
 
 var _profile2 = _interopRequireDefault(_profile);
 

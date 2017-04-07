@@ -35,7 +35,7 @@ class LoginForm extends React.Component{
             username: "",
             password: "",
             message: "",
-            successMessage: "",
+            successMessage: "We made it!",
             isLocked: false
         };
 
@@ -88,10 +88,11 @@ class LoginForm extends React.Component{
                     method: "POST",
                     body:  JSON.stringify({userName : this.state.name , userPassword : this.state.password})
 
-            }).then(response => {
+                }).then(response => {
                 if (response.ok) {
                     //this.setState({message: " "});
                     this.setState({
+                        message: "Account: " + this.state.name + " is made!",
                         successMessage: this.state.name + ", you successfully signed up!",
                         isLocked: true
                     });
@@ -115,24 +116,24 @@ class LoginForm extends React.Component{
         const fieldEmpty = Object.keys(errors).some(x => errors[x]);
 
         return(
-        <div id = "Shadow-Box">
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    <h1 className = "heading">Sign Up</h1>
+            <div id = "Shadow-Box">
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                        <h1 className = "heading">Sign Up</h1>
+                        <br/>
+                        <input className = "formInput" type="text"  placeholder="Enter Username" disabled = {this.state.isLocked} value={this.state.username} onChange={this.handleUsernameChange}/>
+                        <br/>
+                        <input className = "formInput" type="text" placeholder="Enter Name" disabled = {this.state.isLocked} value={this.state.name} onChange={this.handleNameChange}/>
+                        <br/>
+                        <input className = "formInput" type="password"  placeholder="Enter password" disabled = {this.state.isLocked} value={this.state.password} onChange={this.handlePasswordChange}/>
+                        <br/>
+                        <h3 className="loginMessage">{this.state.message}</h3>
+                        <br/>
+                    </label>
+                    <input id = "loginButton" type="submit" value="Create Account" />
                     <br/>
-                    <input className = "formInput" type="text"  placeholder="Enter " disabled = {this.state.isLocked} value={this.state.name} onChange={this.handleNameChange}/>
-                    <br/>
-                    <input className = "formInput" type="text" placeholder="Enter Username" disabled = {this.state.isLocked} value={this.state.username} onChange={this.handleUsernameChange}/>
-                    <br/>
-                    <input className = "formInput" type="password"  placeholder="Enter password" disabled = {this.state.isLocked} value={this.state.password} onChange={this.handlePasswordChange}/>
-                    <br/>
-                    <h3 className="loginMessage">{this.state.message}</h3>
-                    <br/>
-                </label>
-                <input id = "loginButton" type="submit" value="Create Account" />
-                <br/>
-            </form>
-        </div>
+                </form>
+            </div>
         );
     }
 }

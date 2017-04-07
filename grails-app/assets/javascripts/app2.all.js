@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "/assets/";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 187);
+/******/ 	return __webpack_require__(__webpack_require__.s = 188);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21917,7 +21917,8 @@ module.exports = g;
 
 /***/ }),
 /* 182 */,
-/* 183 */
+/* 183 */,
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22024,7 +22025,7 @@ var LoginForm = function (_React$Component2) {
             username: "",
             password: "",
             message: "",
-            successMessage: "",
+            successMessage: "We made it!",
             isLocked: false
         };
 
@@ -22087,6 +22088,7 @@ var LoginForm = function (_React$Component2) {
                     if (response.ok) {
                         //this.setState({message: " "});
                         _this3.setState({
+                            message: "Account: " + _this3.state.name + " is made!",
                             successMessage: _this3.state.name + ", you successfully signed up!",
                             isLocked: true
                         });
@@ -22128,9 +22130,9 @@ var LoginForm = function (_React$Component2) {
                             'Sign Up'
                         ),
                         _react2.default.createElement('br', null),
-                        _react2.default.createElement('input', { className: 'formInput', type: 'text', placeholder: 'Enter ', disabled: this.state.isLocked, value: this.state.name, onChange: this.handleNameChange }),
-                        _react2.default.createElement('br', null),
                         _react2.default.createElement('input', { className: 'formInput', type: 'text', placeholder: 'Enter Username', disabled: this.state.isLocked, value: this.state.username, onChange: this.handleUsernameChange }),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('input', { className: 'formInput', type: 'text', placeholder: 'Enter Name', disabled: this.state.isLocked, value: this.state.name, onChange: this.handleNameChange }),
                         _react2.default.createElement('br', null),
                         _react2.default.createElement('input', { className: 'formInput', type: 'password', placeholder: 'Enter password', disabled: this.state.isLocked, value: this.state.password, onChange: this.handlePasswordChange }),
                         _react2.default.createElement('br', null),
@@ -22155,16 +22157,16 @@ _reactDom2.default.render(_react2.default.createElement(MenuLogin, { icon: 'http
 _reactDom2.default.render(_react2.default.createElement(LoginForm, null), document.getElementById('log-in'));
 
 /***/ }),
-/* 184 */,
 /* 185 */,
 /* 186 */,
-/* 187 */
+/* 187 */,
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _login = __webpack_require__(183);
+var _login = __webpack_require__(184);
 
 var _login2 = _interopRequireDefault(_login);
 

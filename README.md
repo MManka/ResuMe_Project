@@ -16,7 +16,7 @@
   Download <a href = https://nodejs.org/en/> node.js </a> .  Then, from commandline in unix or commandprompt in Windows, run these commands:
   
   npm init
- @@ -22,6 +22,6 @@ npm install babel-core babel-preset-es2015 babel-preset-react babel-loader webpa
+ @@ -22,6 +22,6 @@ npm install babel-core babel-preset-es2015 babel-preset-react babel-loader webpack
   
   Downloading node.js enables you to use npm to download and install React, and enables us to integrate our React code with Gradle-based deployment with Grails in IntelliJ.  Babel is a transpiler.  <a href = https://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html> Go to this tutorial </a> for more information.
   
